@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Alpine Calculator</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.5.0/dist/cdn.min.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex justify-content-center align-items-center vh-100">
+    <div class="calculator card p-3" x-data="calculator()">
+        <input type="text" class="calculator-screen form-control py-2 px-1" x-model="displayValue" disabled />
+        <div class="calculator-keys card-body">
+            <div class="row mb-3">
+                <button type="button" class="operator col btn btn-warning mx-2" @click="handleOperator('+')" value="+">+</button>
+                <button type="button" class="operator col btn btn-warning mx-2" @click="handleOperator('-')" value="-">-</button>
+                <button type="button" class="operator col btn btn-warning mx-2" @click="handleOperator('*')" value="*">&times;</button>
+            </div>
+            <div class="row mb-3">
+                <button type="button" class="operator col btn btn-warning mx-2" @click="handleOperator('/')" value="/">&divide;</button>
+                <button type="button" class="col btn btn-secondary mx-2" @click="inputDigit(7)" value="7">7</button>
+                <button type="button" class="col btn btn-secondary mx-2" @click="inputDigit(8)" value="8">8</button>
+            </div>
+            <div class="row mb-3">
+                <button type="button" class="col btn btn-secondary mx-2" @click="inputDigit(9)" value="9">9</button>
+                <button type="button" class="col btn btn-secondary mx-2" @click="inputDigit(4)" value="4">4</button>
+                <button type="button" class="col btn btn-secondary mx-2" @click="inputDigit(5)" value="5">5</button>
+            </div>
+            <div class="row mb-3">
+                <button type="button" class="col btn btn-secondary mx-2" @click="inputDigit(6)" value="6">6</button>
+                <button type="button" class="col btn btn-secondary mx-2" @click="inputDigit(1)" value="1">1</button>
+                <button type="button" class="col btn btn-secondary mx-2" @click="inputDigit(2)" value="2">2</button>
+            </div>
+            <div class="row mb-3">
+                <button type="button" class="col btn btn-secondary mx-2" @click="inputDigit(3)" value="3">3</button>
+                <button type="button" class="col btn btn-secondary mx-2" @click="inputDigit(0)" value="0">0</button>
+                <button type="button" class="decimal col btn btn-secondary mx-2" @click="inputDecimal('.')" value=".">.</button>
+            </div>
+            <div class="row mx-1">
+                <button type="button" class="all-clear col-6 btn btn-danger" @click="resetCalculator()" value="all-clear">AC</button>
+                <button type="button" class="equal-sign col-6 btn btn-primary" @click="handleOperator('=')" value="=">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+body {
+    background: url('https://source.unsplash.com/1600x900/?abstract') no-repeat center center fixed;
+    background-size: cover;
+    backdrop-filter: blur(8px);
+    background-color: #222;
+}
+
+.calculator {
+    width: 320px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 1); /* Ubah ke putih solid */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.calculator-screen {
+    height: 60px;
+    font-size: 2rem;
+    text-align: right;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+}
+
+.btn {
+    font-size: 1.5rem;
+    border-radius: 10px;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+.operator {
+    color: #fff;
+}
+
+.equal-sign {
+    height: 100%;
+}

@@ -1,0 +1,9 @@
+.git
+.env
+.env.backup
+.env.production
+/.fleet
+/.idea
+/.vscode
+/.node_modules
+/node_modules
